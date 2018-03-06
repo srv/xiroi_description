@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+  
+<!-- Robot -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Load macros -->
+  <xacro:include filename="$(find cola2_lib)/src/cola2_lib/rosutils/urdf_macros.xacro"/>
+
+  <!-- Base link -->
+  <link name="$(arg robot_namespace)/base_link">
+    <visual>
+      <origin rpy="-${pi/2} 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sparus2_description/meshes/sparus2.3ds" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <!-- GPS -->
+  <xacro:add_to_base_link element="gps">
+    <origin rpy="0 0 0" xyz="-0.39 0 -0.35"/>
+  </xacro:add_to_base_link>
+  
+  <!-- DVL -->
+  <xacro:add_to_base_link element="dvl">
+    <origin rpy="${pi} 0 ${3*pi/4}" xyz="-0.4145 0 0.1"/>
+  </xacro:add_to_base_link>
+  
+  <!-- IMU -->
+  <!-- TODO -->
+  <xacro:add_to_base_link element="imu">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </xacro:add_to_base_link>
+  
+  <!-- Pressure -->
+  <!-- TODO -->
+  <xacro:add_to_base_link element="pressure">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </xacro:add_to_base_link>
+  
+  <!-- Thrusters --> 
+  <xacro:add_thruster thruster_id="0">
+    <origin xyz="-0.59 0.17 0" rpy="0 0 ${pi}" />
+  </xacro:add_thruster>
+  <xacro:add_thruster thruster_id="1">
+    <origin xyz="-0.59 -0.17 0" rpy="0 0 ${pi}" />
+  </xacro:add_thruster>
+  <xacro:add_thruster thruster_id="2">
+    <origin xyz="0 0 0.08" rpy="0 0 0" />
+  </xacro:add_thruster>
+  
+</robot>
