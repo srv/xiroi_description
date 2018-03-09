@@ -27,15 +27,19 @@
   </xacro:add_to_base_link>
   
   <!-- IMU -->
-  <!-- TODO -->
   <xacro:add_to_base_link element="imu">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="${pi/2} 0 ${pi/2}" xyz="0.36377 -0.02093 -0.08490"/>
+  </xacro:add_to_base_link>
+  
+  <!-- IMU aligned with robot axis. 
+       This frame is where the data of the IMU filter is published -->
+  <xacro:add_to_base_link element="imu_filter">
+    <origin rpy="0 0 0" xyz="0.36377 -0.02093 -0.08490"/>
   </xacro:add_to_base_link>
   
   <!-- Pressure -->
-  <!-- TODO -->
   <xacro:add_to_base_link element="pressure">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0.387 0 -0.33"/>
   </xacro:add_to_base_link>
   
   <!-- Thrusters --> 
