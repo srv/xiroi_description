@@ -25,6 +25,9 @@
   <xacro:add_to_base_link element="dvl">
     <origin rpy="${pi} 0 ${3*pi/4}" xyz="-0.4145 0 0.1"/>
   </xacro:add_to_base_link>
+  <xacro:add_element element="dvl_altitude" parent="dvl">
+    <origin rpy="0 ${pi/2} 0" xyz="0 0 0"/>
+  </xacro:add_element>
   
   <!-- IMU -->
   <xacro:add_to_base_link element="imu">
