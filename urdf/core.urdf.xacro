@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-  
+
 <!-- Robot -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
@@ -15,45 +15,45 @@
       </geometry>
     </visual>
   </link>
-  
+
   <!-- GPS -->
-  <xacro:add_to_base_link element="gps">
+  <xacro:add_to_base_link_no_mesh element="gps">
     <origin rpy="0 0 0" xyz="-0.39 0 -0.35"/>
-  </xacro:add_to_base_link>
-  
+  </xacro:add_to_base_link_no_mesh>
+
   <!-- DVL -->
-  <xacro:add_to_base_link element="dvl">
+  <xacro:add_to_base_link_no_mesh element="dvl">
     <origin rpy="${pi} 0 ${3*pi/4}" xyz="-0.4145 0 0.1"/>
-  </xacro:add_to_base_link>
-  <xacro:add_element element="dvl_altitude" parent="dvl">
+  </xacro:add_to_base_link_no_mesh>
+  <xacro:add_element_no_mesh element="dvl_altitude" parent="dvl">
     <origin rpy="0 ${pi/2} 0" xyz="0 0 0"/>
-  </xacro:add_element>
-  
+  </xacro:add_element_no_mesh>
+
   <!-- IMU -->
-  <xacro:add_to_base_link element="imu">
+  <xacro:add_to_base_link_no_mesh element="imu">
     <origin rpy="${pi/2} 0 ${pi/2}" xyz="0.36377 -0.02093 -0.08490"/>
-  </xacro:add_to_base_link>
-  
-  <!-- IMU aligned with robot axis. 
+  </xacro:add_to_base_link_no_mesh>
+
+  <!-- IMU aligned with robot axis.
        This frame is where the data of the IMU filter is published -->
-  <xacro:add_to_base_link element="imu_filter">
+  <xacro:add_to_base_link_no_mesh element="imu_filter">
     <origin rpy="0 0 0" xyz="0.36377 -0.02093 -0.08490"/>
-  </xacro:add_to_base_link>
-  
+  </xacro:add_to_base_link_no_mesh>
+
   <!-- Pressure -->
-  <xacro:add_to_base_link element="pressure">
+  <xacro:add_to_base_link_no_mesh element="pressure">
     <origin rpy="0 0 0" xyz="0.387 0 -0.33"/>
-  </xacro:add_to_base_link>
-  
-  <!-- Thrusters --> 
-  <xacro:add_thruster thruster_id="0">
+  </xacro:add_to_base_link_no_mesh>
+
+  <!-- Thrusters -->
+  <xacro:add_thruster_no_mesh thruster_id="0">
     <origin xyz="-0.59 0.17 0" rpy="0 0 ${pi}" />
-  </xacro:add_thruster>
-  <xacro:add_thruster thruster_id="1">
+  </xacro:add_thruster_no_mesh>
+  <xacro:add_thruster_no_mesh thruster_id="1">
     <origin xyz="-0.59 -0.17 0" rpy="0 0 ${pi}" />
-  </xacro:add_thruster>
-  <xacro:add_thruster thruster_id="2">
+  </xacro:add_thruster_no_mesh>
+  <xacro:add_thruster_no_mesh thruster_id="2">
     <origin xyz="0 0 0.08" rpy="0 0 0" />
-  </xacro:add_thruster>
-  
+  </xacro:add_thruster_no_mesh>
+
 </robot>
