@@ -9,21 +9,21 @@
   <!-- Base link -->
   <link name="$(arg robot_namespace)/base_link">
     <visual>
-      <origin rpy="-${pi/2} 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://sparus2_description/meshes/sparus2.3ds" scale="1 1 1"/>
+        <mesh filename="package://sparus2_description/meshes/sparus2.dae" scale="1 1 1"/>
       </geometry>
     </visual>
   </link>
 
   <!-- GPS -->
   <xacro:add_to_base_link_no_mesh element="gps">
-    <origin rpy="0 0 0" xyz="-0.39 0 -0.35"/>
+    <origin rpy="0 0 0" xyz="-0.39 0 -0.36"/>
   </xacro:add_to_base_link_no_mesh>
 
   <!-- DVL -->
   <xacro:add_to_base_link_no_mesh element="dvl">
-    <origin rpy="${pi} 0 ${3*pi/4}" xyz="-0.4145 0 0.1"/>
+    <origin rpy="${pi} 0 ${3*pi/4}" xyz="-0.4145 0 0.11"/>
   </xacro:add_to_base_link_no_mesh>
   <xacro:add_element_no_mesh element="dvl_altitude" parent="dvl">
     <origin rpy="0 ${pi/2} 0" xyz="0 0 0"/>
@@ -37,23 +37,23 @@
   <!-- IMU aligned with robot axis.
        This frame is where the data of the IMU filter is published -->
   <xacro:add_to_base_link_no_mesh element="imu_filter">
-    <origin rpy="0 0 0" xyz="0.36377 -0.02093 -0.08490"/>
+    <origin rpy="0 0 0" xyz="0.36377 -0.02093 -0.0849"/>
   </xacro:add_to_base_link_no_mesh>
 
   <!-- Pressure -->
   <xacro:add_to_base_link_no_mesh element="pressure">
-    <origin rpy="0 0 0" xyz="0.387 0 -0.33"/>
+    <origin rpy="0 0 0" xyz="0.387 0 -0.033"/>
   </xacro:add_to_base_link_no_mesh>
 
   <!-- Thrusters -->
   <xacro:add_thruster_no_mesh thruster_id="0">
-    <origin xyz="-0.59 0.17 0" rpy="0 0 ${pi}" />
+    <origin xyz="0 0 0.08" rpy="0 0 0" />
   </xacro:add_thruster_no_mesh>
   <xacro:add_thruster_no_mesh thruster_id="1">
-    <origin xyz="-0.59 -0.17 0" rpy="0 0 ${pi}" />
+    <origin xyz="-0.59 0.17 0" rpy="0 0 ${pi}" />
   </xacro:add_thruster_no_mesh>
   <xacro:add_thruster_no_mesh thruster_id="2">
-    <origin xyz="0 0 0.08" rpy="0 0 0" />
+    <origin xyz="-0.59 -0.17 0" rpy="0 0 ${pi}" />
   </xacro:add_thruster_no_mesh>
 
 </robot>
