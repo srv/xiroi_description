@@ -10,8 +10,17 @@
   <!-- <xacro:arg name="robot_xacro" default="$(find sparus2_description)/urdf/core.urdf.xacro"/> -->
   <xacro:arg name="robot_xacro" default="$(find xiroi_description)/urdf/core.urdf.xacro"/>
 
-  <!-- Load basic xiroi urdf -->
+  <!-- Load basic Xiroi urdf -->
   <xacro:include filename="$(arg robot_xacro)"/>
 
+  <!-- USBL 
+  <xacro:add_to_base_link_no_mesh element="USBL">
+    <origin rpy="0 0 0" xyz="0.45 0 -0.13"/>
+  </xacro:add_to_base_link_no_mesh>-->
+
+  <!-- Cameras 
+  <xacro:add_to_base_link_no_mesh element="multibeam">
+    <origin rpy="0 -${pi/2} ${pi}" xyz="0.5 0 0"/>
+  </xacro:add_to_base_link_no_mesh>-->
 
 </robot>
