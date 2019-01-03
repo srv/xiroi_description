@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="sparus2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="xiroi" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- Arguments -->
   <!--
@@ -7,61 +7,11 @@
     file or using the following line to set it as default.
     xacro:arg name="robot_namespace" default="sparus2"/
   -->
-  <xacro:arg name="robot_xacro" default="$(find sparus2_description)/urdf/core.urdf.xacro"/>
+  <!-- <xacro:arg name="robot_xacro" default="$(find sparus2_description)/urdf/core.urdf.xacro"/> -->
+  <xacro:arg name="robot_xacro" default="$(find xiroi_description)/urdf/core.urdf.xacro"/>
 
-  <!-- Load basic Sparus 2 urdf -->
+  <!-- Load basic xiroi urdf -->
   <xacro:include filename="$(arg robot_xacro)"/>
 
-  <!-- Modem -->
-  <xacro:add_to_base_link_no_mesh element="modem">
-    <origin rpy="0 0 0" xyz="0.45 0 -0.13"/>
-  </xacro:add_to_base_link_no_mesh>
-
-  <!-- Multibeam -->
-  <xacro:add_to_base_link_no_mesh element="multibeam">
-    <origin rpy="0 -${pi/2} ${pi}" xyz="0.5 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-
-  <!-- Side Scan -->
-  <xacro:add_to_base_link_no_mesh element="sidescan_port">
-    <origin rpy="${pi/4} 0 0" xyz="0.22 -0.10129 0.05386"/>
-  </xacro:add_to_base_link_no_mesh>
-  <xacro:add_to_base_link_no_mesh element="sidescan_starbord">
-    <origin rpy="-${pi/4} 0 0" xyz="0.22 0.10129 0.05386"/>
-  </xacro:add_to_base_link_no_mesh>
-
-  <!-- Echosounders -->
-  <xacro:add_to_base_link_no_mesh element="echosounder11">
-    <origin rpy="0 0 ${pi/2}" xyz="0.6 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-  <xacro:add_to_base_link_no_mesh element="echosounder12">
-    <origin rpy="0 0 -${pi/4}" xyz="0.6 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-  <xacro:add_to_base_link_no_mesh element="echosounder13">
-    <origin rpy="0 0 ${pi/4}" xyz="0.6 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-  <xacro:add_to_base_link_no_mesh element="echosounder14">
-    <origin rpy="0 0 0" xyz="0.6 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-  <xacro:add_to_base_link_no_mesh element="echosounder15">
-    <origin rpy="0 -${pi/2} 0" xyz="0.6 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-
-  <!-- Guppy -->
-  <xacro:add_to_base_link_no_mesh element="guppy">
-    <origin rpy="0 0 0" xyz="0.7 0 0"/>
-  </xacro:add_to_base_link_no_mesh>
-
-  <!-- Micron -->
-  <xacro:add_to_base_link_no_mesh element="micron">
-    <!-- origin rpy="0 0 -${pi}" xyz="0.885 0 -0.21"/ --> <!-- horizontal -->
-    <origin rpy="0 0 -${pi}" xyz="0.7 0 -0.15"/> <!-- horizontal -->
-    <!-- origin rpy="${pi} ${pi/2} 0" xyz="0.918 0 -0.09"/ --> <!-- vertical -->
-  </xacro:add_to_base_link_no_mesh>
-
-  <!-- Profiler -->
-  <xacro:add_to_base_link_no_mesh element="profiler">
-    <origin rpy="0 ${pi} ${pi}" xyz="0.885 0 0.1"/>
-  </xacro:add_to_base_link_no_mesh>
 
 </robot>
