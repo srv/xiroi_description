@@ -16,16 +16,16 @@
     </visual>
   </link>
 
-  <!-- GPS 
+  <!-- GPS -->
   <xacro:add_to_base_link_no_mesh element="gps">
-    <origin rpy="0 0 0" xyz="-0.39 0 -0.36"/>
-  </xacro:add_to_base_link_no_mesh>-->
+    <origin rpy="0 0 0" xyz="-30 13 -25"/>
+  </xacro:add_to_base_link_no_mesh>
 
   
-  <!-- IMU 
+  <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    <origin rpy="${pi/2} 0 ${pi/2}" xyz="0.36377 -0.02093 -0.08490"/>
-  </xacro:add_to_base_link_no_mesh>-->
+    <origin rpy="0 0 0" xyz="10 7 0"/>
+  </xacro:add_to_base_link_no_mesh>
 
   <!-- IMU aligned with robot axis.
        This frame is where the data of the IMU filter is published 
@@ -34,15 +34,11 @@
   </xacro:add_to_base_link_no_mesh>-->
 
   
-  <!-- Thrusters 
+  <!-- Thrusters -->
   <xacro:add_thruster_no_mesh thruster_id="0">
-    <origin xyz="0 0 0.08" rpy="0 0 0" />
+    <origin xyz="-50 50 30" rpy="0 0 0" />
   </xacro:add_thruster_no_mesh>
   <xacro:add_thruster_no_mesh thruster_id="1">
-    <origin xyz="-0.59 0.17 0" rpy="0 0 ${pi}" />
+    <origin xyz="-50 -50 30" rpy="0 0 0" />
   </xacro:add_thruster_no_mesh>
-  <xacro:add_thruster_no_mesh thruster_id="2">
-    <origin xyz="-0.59 -0.17 0" rpy="0 0 ${pi}" />
-  </xacro:add_thruster_no_mesh>-->
-
 </robot>
