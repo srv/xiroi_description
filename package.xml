@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>sparus2_description</name>
+  <name>xiroi_description</name>
   <version>3.0.0</version>
-  <description>The sparus2_description package</description>
+  <description>The xiroi_description package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
