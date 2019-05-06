@@ -24,7 +24,7 @@
   
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    <origin rpy="0 0 0" xyz="0.10 0.7 0"/>
+    <origin rpy="3.1416 0 1.5708" xyz="0.10 0.7 0"/>
   </xacro:add_to_base_link_no_mesh>
 
   <!-- IMU aligned with robot axis.
