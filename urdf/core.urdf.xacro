@@ -24,14 +24,9 @@
   
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    <origin rpy="0 0 0" xyz="-0.20 -0.25 -0.67"/>
+    <origin rpy="0 0 1.57" xyz="1 0 0"/>
   </xacro:add_to_base_link_no_mesh>
 
-  <!-- IMU aligned with robot axis.
-       This frame is where the data of the IMU filter is published 
-  <xacro:add_to_base_link_no_mesh element="imu_filter">
-    <origin rpy="0 0 0" xyz="0.36377 -0.02093 -0.0849"/>
-  </xacro:add_to_base_link_no_mesh>-->
 
   
   <!-- Thrusters -->
