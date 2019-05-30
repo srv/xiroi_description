@@ -24,7 +24,7 @@
   
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    <origin rpy="0 3.1416 3.1416" xyz="1 0 0"/>
+    <origin rpy="0 0 1.57" xyz="1 0 0"/>
   </xacro:add_to_base_link_no_mesh>
 
 
