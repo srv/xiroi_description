@@ -18,15 +18,18 @@
 
   <!-- GPS -->
   <xacro:add_to_base_link_no_mesh element="gps">
-    <origin rpy="0 0 0" xyz="0.60 0.5 -0.1"/><!-- <origin rpy="0 0 0" xyz="-0.30 0.13 -0.25"/> -->
+    <origin rpy="0 0 0" xyz="0.70 0.35 -0.1"/>
   </xacro:add_to_base_link_no_mesh>
 
-  
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
     <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
   </xacro:add_to_base_link_no_mesh>
 
+  <!-- USBL -->
+  <xacro:add_to_base_link_no_mesh element="usbl">
+    <origin rpy="0 0 0" xyz="0.32 0 0.8"/>
+  </xacro:add_to_base_link_no_mesh>
   
   <!-- Thrusters -->
   <xacro:add_thruster_no_mesh thruster_id="1">
