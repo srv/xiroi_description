@@ -2,6 +2,7 @@
     <!-- Arguments -->
     <arg name="robot_name"/>
     <arg name="payload_xacro" default="$(find xiroi_description)/urdf/payload.urdf.xacro"/>
+    <!-- <arg name="core_xacro" default="$(find xiroi_description)/urdf/core.urdf.xacro"/> -->
 
     <!-- Robot description -->
     <param name="robot_description" command="$(find xacro)/xacro --inorder '$(arg payload_xacro)' robot_namespace:=$(arg robot_name)"/>

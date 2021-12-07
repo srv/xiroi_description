@@ -24,12 +24,19 @@
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
     <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
+
+    <!-- good_: -->
+    <!-- <origin rpy="0 0 3.14" xyz="-0.35 0.1 -0.2"/> -->
+
+    <!-- <origin rpy="2.5 3.14 0.25" xyz="-0.35 0.1 -0.2"/> -->
+
+    <!-- <origin rpy="3.14 0 0" xyz="-0.35 0.1 -0.2"/> -->
   </xacro:add_to_base_link_no_mesh>
 
   <!-- USBL -->
-  <xacro:add_to_base_link_no_mesh element="usbl">
+  <!-- <xacro:add_to_base_link_no_mesh element="usbl">
     <origin rpy="0 0 0" xyz="0.32 0 0.8"/>
-  </xacro:add_to_base_link_no_mesh>
+  </xacro:add_to_base_link_no_mesh> -->
   
   <!-- Thrusters -->
   <xacro:add_thruster_no_mesh thruster_id="1">
