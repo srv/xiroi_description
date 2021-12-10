@@ -23,14 +23,14 @@
 
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
+    <origin rpy="0 0 3.14" xyz="-0.35 0.1 -0.2"/>
 
-    <!-- good_: -->
-    <!-- <origin rpy="0 0 3.14" xyz="-0.35 0.1 -0.2"/> -->
+  </xacro:add_to_base_link_no_mesh>
 
-    <!-- <origin rpy="2.5 3.14 0.25" xyz="-0.35 0.1 -0.2"/> -->
-
-    <!-- <origin rpy="3.14 0 0" xyz="-0.35 0.1 -0.2"/> -->
+    <!-- IMU aligned with robot axis.
+       This frame is where the data of the IMU filter is published -->
+  <xacro:add_to_base_link_no_mesh element="imu_filter">
+    <origin rpy="0 0 0" xyz="-0.35 0.1 -0.2"/>
   </xacro:add_to_base_link_no_mesh>
 
   <!-- USBL -->
