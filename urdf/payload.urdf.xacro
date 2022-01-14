@@ -13,10 +13,10 @@
   <!-- Load basic Xiroi urdf -->
   <xacro:include filename="$(arg robot_xacro)"/>
 
-  <!-- USBL 
-  <xacro:add_to_base_link_no_mesh element="USBL">
-    <origin rpy="0 0 0" xyz="0.45 0 -0.13"/>
-  </xacro:add_to_base_link_no_mesh>-->
+  <!-- USBL -->
+  <xacro:add_to_base_link_no_mesh element="usbl">
+    <origin rpy="0 0 0" xyz="0.32 0 0.8"/>
+  </xacro:add_to_base_link_no_mesh>
 
   <!-- Cameras 
   <xacro:add_to_base_link_no_mesh element="multibeam">
