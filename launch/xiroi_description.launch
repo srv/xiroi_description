@@ -1,6 +1,6 @@
 <launch>
     <!-- Arguments -->
-    <arg name="robot_name"/>
+    <arg name="robot_name" default="xiroi"/>
     <arg name="payload_xacro" default="$(find xiroi_description)/urdf/payload.urdf.xacro"/>
 
     <!-- Robot description -->
