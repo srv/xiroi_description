@@ -23,15 +23,20 @@
 
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    <origin rpy="0 0 3.14" xyz="-0.35 0.1 -0.2"/>
+    
+    <!-- The original transformation was: -->
+ 	  <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
+
+     <!-- good (real): use this one for calibration branch: -->
+		<!-- <origin rpy="0 0 3.14" xyz="-0.35 0.1 -0.2"/> -->
 
   </xacro:add_to_base_link_no_mesh>
 
-    <!-- IMU aligned with robot axis.
-       This frame is where the data of the IMU filter is published -->
-  <xacro:add_to_base_link_no_mesh element="imu_filter">
+  <!-- IMU aligned with robot axis.
+  This frame is where the data of the IMU filter is published -->
+  <!-- <xacro:add_to_base_link_no_mesh element="imu_filter">
     <origin rpy="0 0 0" xyz="-0.35 0.1 -0.2"/>
-  </xacro:add_to_base_link_no_mesh>
+  </xacro:add_to_base_link_no_mesh> -->
 
   <!-- USBL -->
   <!-- <xacro:add_to_base_link_no_mesh element="usbl">
