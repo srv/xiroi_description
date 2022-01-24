@@ -9,9 +9,9 @@
   <!-- Base link -->
   <link name="$(arg robot_namespace)/base_link">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="-1.57 0 -1.57" xyz="-1 -1.2 0"/>
       <geometry>
-        <mesh filename="package://xiroi_description/meshes/xiroi.dae" scale="1 1 1"/>
+        <mesh filename="package://xiroi_description/meshes/xiroi.dae" scale="0.011 0.011 0.011"/>
       </geometry>
     </visual>
   </link>
