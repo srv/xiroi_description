@@ -24,7 +24,7 @@
   <!-- IMU -->
   <xacro:add_to_base_link_no_mesh element="imu">
     
-    <!-- The original transformation was: -->
+    <!-- The original transformation was (use this for dev branch): -->
  	  <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
 
      <!-- good (real): use this one for calibration branch: -->
