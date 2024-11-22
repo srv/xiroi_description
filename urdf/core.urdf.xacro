@@ -16,10 +16,29 @@
     </visual>
   </link>
 
-
   <!-- usbl -->
   <xacro:add_to_base_link_no_mesh element="usbl">
     <origin rpy="0 0 0" xyz="0.32 0 0.8"/>
+  </xacro:add_to_base_link_no_mesh>
+  
+  <!-- dvl_altitude -->
+  <xacro:add_element_no_mesh element="dvl_altitude" parent="dvl">
+    <origin rpy="0.0000 1.5708 0.0000" xyz="0.000 0.000 0.000"/>
+  </xacro:add_element_no_mesh>
+
+  <!-- pressure -->
+  <xacro:add_to_base_link_no_mesh element="pressure">
+    <origin rpy="0.0000 0.0000 0.0000" xyz="0.390 0.000 -0.033"/>
+  </xacro:add_to_base_link_no_mesh>
+
+  <!-- dvl -->
+  <xacro:add_to_base_link_no_mesh element="dvl">
+    <origin rpy="3.1416 0.0000 2.3562" xyz="-0.413 0.000 0.113"/>
+  </xacro:add_to_base_link_no_mesh>
+
+  <!-- imu_filter -->
+  <xacro:add_to_base_link_no_mesh element="imu_filter">
+    <origin rpy="0.0000 0.0000 0.0000" xyz="0.364 -0.021 -0.085"/>
   </xacro:add_to_base_link_no_mesh>
 
   <!-- gps -->
@@ -32,13 +51,13 @@
     <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
   </xacro:add_to_base_link_no_mesh>
 
-  <!-- thruster_0 -->
-  <xacro:add_to_base_link_no_mesh element="thruster_0">
+  <!-- thruster_1 -->
+  <xacro:add_to_base_link_no_mesh element="thruster_1">
     <origin xyz="-0.50 0.50 0.30" rpy="0 0 0" />
   </xacro:add_to_base_link_no_mesh>
 
-  <!-- thruster_1 -->
-  <xacro:add_to_base_link_no_mesh element="thruster_1">
+  <!-- thruster_2 -->
+  <xacro:add_to_base_link_no_mesh element="thruster_2">
     <origin xyz="-0.50 -0.50 0.30" rpy="0 0 0" />
   </xacro:add_to_base_link_no_mesh>
 
