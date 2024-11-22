@@ -4,7 +4,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- Load macros -->
-  <xacro:include filename="$(find cola2_lib)/src/cola2_lib/rosutils/urdf_macros.xacro"/>
+  <xacro:include filename="$(find cola2_lib_ros)/src/cola2_lib_ros/urdf_macros.xacro"/>
 
   <!-- Base link -->
   <link name="$(arg robot_namespace)/base_link">
@@ -16,38 +16,30 @@
     </visual>
   </link>
 
-  <!-- GPS -->
+
+  <!-- usbl -->
+  <xacro:add_to_base_link_no_mesh element="usbl">
+    <origin rpy="0 0 0" xyz="0.32 0 0.8"/>
+  </xacro:add_to_base_link_no_mesh>
+
+  <!-- gps -->
   <xacro:add_to_base_link_no_mesh element="gps">
     <origin rpy="0 0 0" xyz="0.70 0.35 -0.1"/>
   </xacro:add_to_base_link_no_mesh>
 
-  <!-- IMU -->
+  <!-- imu -->
   <xacro:add_to_base_link_no_mesh element="imu">
-    
-    <!-- The original transformation was (use this for dev branch): -->
- 	  <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
-
-     <!-- good (real): use this one for calibration branch: -->
-		<!-- <origin rpy="0 0 3.14" xyz="-0.35 0.1 -0.2"/> -->
-
+    <origin rpy="0 0 -1.57" xyz="-0.35 0.1 -0.2"/>
   </xacro:add_to_base_link_no_mesh>
 
-  <!-- IMU aligned with robot axis.
-  This frame is where the data of the IMU filter is published -->
-  <!-- <xacro:add_to_base_link_no_mesh element="imu_filter">
-    <origin rpy="0 0 0" xyz="-0.35 0.1 -0.2"/>
-  </xacro:add_to_base_link_no_mesh> -->
-
-  <!-- USBL -->
-  <!-- <xacro:add_to_base_link_no_mesh element="usbl">
-    <origin rpy="0 0 0" xyz="0.32 0 0.8"/>
-  </xacro:add_to_base_link_no_mesh> -->
-  
-  <!-- Thrusters -->
-  <xacro:add_thruster_no_mesh thruster_id="1">
+  <!-- thruster_0 -->
+  <xacro:add_to_base_link_no_mesh element="thruster_0">
     <origin xyz="-0.50 0.50 0.30" rpy="0 0 0" />
-  </xacro:add_thruster_no_mesh>
-  <xacro:add_thruster_no_mesh thruster_id="2">
+  </xacro:add_to_base_link_no_mesh>
+
+  <!-- thruster_1 -->
+  <xacro:add_to_base_link_no_mesh element="thruster_1">
     <origin xyz="-0.50 -0.50 0.30" rpy="0 0 0" />
-  </xacro:add_thruster_no_mesh>
+  </xacro:add_to_base_link_no_mesh>
+
 </robot>
